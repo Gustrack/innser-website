@@ -1,0 +1,45 @@
+// Funcionalidad básica para el sitio
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Efecto de aparición gradual para elementos al hacer scroll
+    const fadeElements = document.querySelectorAll('.service-card, .feature-icon');
+    
+    const fadeOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const fadeOnScroll = new IntersectionObserver(function(entries, fadeOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('fade-in');
+                fadeOnScroll.unobserve(entry.target);
+            }
+        });
+    }, fadeOptions);
+    
+    fadeElements.forEach(element => {
+        fadeOnScroll.observe(element);
+    });
+});

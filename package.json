@@ -1,0 +1,17 @@
+{
+  "name": "innser-website",
+  "version": "1.0.0",
+  "description": "Sitio web de INNSER - Eficiencia Energética",
+  "main": "download-images.js",
+  "scripts": {
+    "download-images": "node download-images.js",
+    "setup": "npm run download-images",
+    "dev": "live-server --port=3000"
+  },
+  "keywords": ["website", "energy", "efficiency", "bootstrap"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
