@@ -1,175 +1,27 @@
-// Variables de colores
-$primary-color: #0d6efd;
-$secondary-color: #6c757d;
-$dark-color: #212529;
-$light-color: #f8f9fa;
-$success-color: #198754;
+//utilities//
+@import "./utilities/mixins";
+@import "./utilities/utilidades";
+@import "./utilities/animaciones";
 
-// Mixins
-@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
-  transition: $property $duration $timing;
-}
+//base//
+@import "./base/colores";
+@import "./base/estilos";
 
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+//layout//
+@import "./layout/footer";
+@import "./layout/hero-section";
 
-// Estilos generales
-body {
-  font-family: 'Roboto', sans-serif;
-  padding-top: 76px; // Compensa la navbar fija
-  overflow-x: hidden;
-}
+//componentes//
+@import "./components/botones";
+@import "./components/cards";
+@import "./components/icons";
+@import "./components/navbar";
 
-// Navbar personalizada
-.navbar {
-  &-brand {
-    @include flex-center;
-  }
-}
+//madia quieries//
+@import "./mediaq/responsive";
 
-.logo {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
 
-.brand-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
 
-.navbar-nav {
-  .nav-link {
-    font-weight: 500;
-    @include transition(color);
-    
-    &:hover {
-      color: rgba(255, 255, 255, 0.8) !important;
-    }
-  }
-}
 
-// Hero section
-.hero-section {
-  margin-bottom: 3rem;
-}
 
-.hero-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  @include flex-center;
-  position: relative;
-}
 
-.hero-content {
-  z-index: 2;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-// Feature icons
-.feature-icon {
-  width: 50px;
-  height: 50px;
-  background-color: $primary-color;
-  border-radius: 50%;
-  @include flex-center;
-  color: white;
-  font-size: 1.5rem;
-}
-
-// Service cards
-.service-card {
-  @include transition(transform, 0.3s);
-  @include transition(box-shadow, 0.3s);
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-}
-
-// Botones personalizados
-.btn-primary {
-  background-color: $primary-color;
-  border-color: $primary-color;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  
-  &:hover {
-    background-color: darken($primary-color, 10%);
-    border-color: darken($primary-color, 12%);
-  }
-}
-
-// Footer
-footer {
-  a {
-    &:hover {
-      color: $primary-color !important;
-      @include transition(color);
-    }
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-  .hero-banner {
-    height: 50vh;
-  }
-  
-  .display-4 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content {
-    .lead {
-      font-size: 1rem;
-    }
-  }
-}
-
-// Utilidades adicionales
-.text-primary {
-  color: $primary-color !important;
-}
-
-.bg-primary {
-  background-color: $primary-color !important;
-}
-
-.section-padding {
-  padding: 5rem 0;
-}
-
-// Animaciones suaves
-.fade-in {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
