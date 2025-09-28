@@ -1,0 +1,9 @@
+// Footer
+footer {
+  a {
+    &:hover {
+      color: $primary-color !important;
+      @include transition(color);
+    }
+  }
+}

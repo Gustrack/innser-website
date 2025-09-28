@@ -1,0 +1,28 @@
+// Hero section
+.hero-section {
+  margin-bottom: 3rem;
+}
+
+.hero-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  @include flex-center;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}

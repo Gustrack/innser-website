@@ -8,23 +8,10 @@
     "setup": "npm run download-images",
     "dev": "live-server --port=3000"
   },
-  "keywords": [
-    "website",
-    "energy",
-    "efficiency",
-    "bootstrap"
-  ],
-  "author": "Tu Nombre",
+  "keywords": ["website", "energy", "efficiency", "bootstrap"],
+  "author": "Gustavo Atala",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gustrack/innser-website.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Gustrack/innser-website/issues"
-  },
-  "homepage": "https://github.com/Gustrack/innser-website#readme"
+  }
 }
