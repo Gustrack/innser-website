@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Evita crawling de archivos innecesarios
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap location
+Sitemap: https://innser-website.netlify.app/sitemap.xml
+
+# INNSER - Eficiencia Energética
+# Gracias por visitar nuestro sitio
