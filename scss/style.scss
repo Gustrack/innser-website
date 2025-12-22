@@ -1,24 +1,24 @@
 //utilities//
-@import "./utilities/mixins";
-@import "./utilities/utilidades";
-@import "./utilities/animaciones";
+@use "./utilities/mixins";
+@use "./utilities/utilidades";
+@use "./utilities/animaciones";
 
 //base//
-@import "./base/colores";
-@import "./base/estilos";
+@use "./base/colores";
+@use "./base/estilos";
 
 //layout//
-@import "./layout/footer";
-@import "./layout/hero-section";
+@use "./layout/footer";
+@use "./layout/hero-section";
 
 //componentes//
-@import "./components/botones";
-@import "./components/cards";
-@import "./components/icons";
-@import "./components/navbar";
+@use "./components/botones";
+@use "./components/cards";
+@use "./components/icons";
+@use "./components/navbar";
 
 //madia quieries//
-@import "./mediaq/responsive";
+@use "./mediaq/responsive";
 
 
 

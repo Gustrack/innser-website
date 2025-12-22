@@ -1,7 +1,9 @@
+@use "../utilities/mixins";
+
 // Service cards
 .service-card {
-  @include transition(transform, 0.3s);
-  @include transition(box-shadow, 0.3s);
+  @include mixins.transition(transform, 0.3s);
+  @include mixins.transition(box-shadow, 0.3s);
   border: none;
   border-radius: 10px;
   overflow: hidden;

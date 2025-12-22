@@ -1,12 +1,15 @@
+@use "sass:color";
+@use "../base/colores";
+
 // Botones personalizados
 .btn-primary {
-  background-color: $primary-color;
-  border-color: $primary-color;
+  background-color: colores.$primary-color;
+  border-color: colores.$primary-color;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   
   &:hover {
-    background-color: darken($primary-color, 10%);
-    border-color: darken($primary-color, 12%);
+    background-color: color.adjust(colores.$primary-color, $lightness: -10%);
+    border-color: color.adjust(colores.$primary-color, $lightness: -12%);
   }
 }

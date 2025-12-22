@@ -1,9 +1,12 @@
+@use "../base/colores";
+@use "../utilities/mixins";
+
 // Footer
 footer {
   a {
     &:hover {
-      color: $primary-color !important;
-      @include transition(color);
+      color: colores.$primary-color !important;
+      @include mixins.transition(color);
     }
   }
 }

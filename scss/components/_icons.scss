@@ -1,10 +1,13 @@
+@use "../base/colores";
+@use "../utilities/mixins";
+
 // Feature icons
 .feature-icon {
   width: 50px;
   height: 50px;
-  background-color: $primary-color;
+  background-color: colores.$primary-color;
   border-radius: 50%;
-  @include flex-center;
+  @include mixins.flex-center;
   color: white;
   font-size: 1.5rem;
 }
